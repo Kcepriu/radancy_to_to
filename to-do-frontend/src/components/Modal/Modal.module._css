@@ -1,0 +1,46 @@
+.overlay {
+  @apply fixed 
+  bottom-0 
+  left-0 top-0 right-0 
+  mx-auto 
+  flex justify-center 
+  items-center z-50  
+  bg-opacity-60
+  bg-modal_overlay;
+}
+
+.modalContainer {
+  @apply relative
+  max-w-full
+  md:max-w-full
+  lg:max-w-[95%] 
+  
+  min-w-[250px] 
+  rounded-lg     
+  overflow-y-auto  
+  bg-white
+   
+   
+  transition-transform
+  transform-gpu
+  duration-300
+  ease-in-out
+  scale-0
+  data-[is-open=true]:scale-100;
+}
+
+.modalCloseBtn {
+  @apply absolute   
+  top-6 
+  right-5
+  md:right-6 
+  block 
+  w-6 h-6 
+  border-none 
+  cursor-pointer 
+  transition
+  hover:scale-110    
+  data-[is-dark=true]:text-white
+  data-[is-dark=true]:hover:text-blue_action
+  hover:text-blue_action;
+}
